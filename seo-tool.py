@@ -41,3 +41,97 @@ mirror site, the link to the 'About Us' page will link
 to classicrooftile.com/about-us rather than 
 classicrooftiles.com/about-us
 '''
+
+
+''' 
+BRING IN THE DATA
+'''
+
+# Read from CSV and store data in variable
+inputFile = open("seo-input.csv", "r")
+
+
+# Create variables to hold city and state
+# Ideally this section would be variables 
+# to grab the relevant row from each table
+# so that every city and keyword combo
+# would run through the loop
+city = inputFile.cell.a2
+state = inputFile.cell.b2
+# Create an array to hold the keywords
+keywords = ([
+		inputFile.cell.c2
+		])
+
+
+
+
+
+'''
+CONTENT STRUCTURING
+'''
+
+htmlOpen = '''
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="">
+	<meta name="robots" content="noodp">
+	<link rel="canonical" href="">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+</head>
+<body>
+'''
+
+htmlClose = '''
+	<div>
+		Google Map Here
+	</div>
+	<div>
+		Google Weather of City
+	</div>
+</body>
+</html>
+'''
+
+content = # scraper tool here
+
+
+
+def restructureContent(content):
+
+	# restructuring tool here
+
+
+	return htmlOpen + uniqueContent + htmlClose
+
+
+
+def structureURL(city, keyword):
+
+	kw = keyword
+	hyphenKW = kw.replace(" ", "-")
+
+	return city + '-' + hyphenKW
+
+
+
+'''
+CREATE HTML FILES
+'''
+
+for keyword in keywords:
+	pageHTML = restructureContent()
+	structuredURL = structureURL()
+
+	newFile = open("%s.html" % structuredURL, 'w')
+	newFile.writelines(pageHTML)
+	newFile.close()
