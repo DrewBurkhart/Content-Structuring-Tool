@@ -1,9 +1,4 @@
-''' SEO TOOL
-Tool that reads from CSV, structures relevant content 
-in various configurations to look fresh to the google
-search crawler and creates html files with structured
-names to rank higher
-
+''' Content Structuring Tool
 
 Essentially, we will:
 	- Create a CSV that has state, city, and keywords
@@ -29,17 +24,6 @@ The tool will:
 	- Run all of this in a for loop that will repeat 
 		the action for each keyword
 
-We will then move all of these files to the server of 
-the mirror site in a folder titled as the state name 
-so the eventual URL will be something like:
-classicrooftiles.com/california/temecula-used-roof-tile.html
-which will have a 307 redirect to the home page of that 
-site. That home page will be built so that it looks 
-identical to the primary site and all links redirect 
-to the main site classicrooftile.com so that, on the
-mirror site, the link to the 'About Us' page will link
-to classicrooftile.com/about-us rather than 
-classicrooftiles.com/about-us
 '''
 
 
