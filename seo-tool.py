@@ -77,11 +77,10 @@ htmlOpen = '''
 
 htmlClose = '''
 	<div>
-		Google Map Here
+	<div style="width:622px;height:401px;margin:0 auto"><div style="padding:10px"><iframe frameborder="0" height="401" marginheight="0" marginwidth="0" scrolling="no" src="//maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=STATE+CITY&amp;ie=UTF8&amp;z=12&amp;t=m&amp;iwloc=near&amp;output=embed" width="622"></iframe></div></div>
 	</div>
 	<div>
-		Google Weather of City
-	</div>
+	<a href="http://www.showmyweather.com/" title="Show My Weather Forecast" onclick="window.open(this.href);return(false);"><script type="text/javascript" src="http://www.showmyweather.com/weather_widget.php?int=0&amp;type=js&amp;country=us&amp;state=STATE&amp;city=CITY&amp;smallicon=1&amp;current=1&amp;forecast=1&amp;background_color=ffffff&amp;color=1e1e1e&amp;width=300&amp;padding=20&amp;border_width=2&amp;border_color=1e1e1e&amp;font_size=14&amp;font_family=Verdana&amp;showicons=1&amp;measure=F&amp;d=2017-06-20"></script></a>	</div>
 </body>
 </html>
 '''
